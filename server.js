@@ -8,6 +8,7 @@ const multer = require("multer");
 const fs = require("fs");
 
 const app = express();
+const path = require("path");
 
 const upload = multer({
     dest: "uploads/"
@@ -198,18 +199,18 @@ app.post("/scan-image", upload.single("image"), async (req, res) => {
 // Home
 // =========================
 
+app.use(express.static(__dirname));
+
 app.get("/", (req, res) => {
-
-    res.send("Server is running ✅");
-
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // =========================
 // Start Server
 // =========================
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
 
-    console.log("✅ Server running on http://localhost:3000");
-
+app.listen(PORT, () => {
+    console.log(`✅ Server running on port ${PORT}`);
 });
