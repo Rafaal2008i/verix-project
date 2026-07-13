@@ -22,8 +22,8 @@ app.use(express.json());
 // =========================
 
 const ai = new GoogleGenAI({
-    apiKey: process.env.GEMINI_API_KEY
-});
+   apiKey:process.env.GEMINI_API_KEY
+  });  
 
 console.log("Gemini Key:", process.env.GEMINI_API_KEY);
 console.log("VT KEY:", process.env.VT_API_KEY);
