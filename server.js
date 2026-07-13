@@ -26,7 +26,7 @@ const ai = new GoogleGenAI({
 });
 
 console.log("Gemini Key:", process.env.GEMINI_API_KEY);
-
+console.log("VT KEY:", process.env.VT_API_KEY);
 // =========================
 // VirusTotal Scan
 // =========================
