@@ -69,7 +69,7 @@ async function checkURL() {
 
     try {
 
-        const response = await fetch("http://localhost:3000/scan-url", {
+        const response = await fetch("https://verix-project.onrender.com/scan-url", {
 
             method: "POST",
 
@@ -188,7 +188,7 @@ async function sendMessage() {
 
     try {
 
-        const response = await fetch("http://localhost:3000/chat", {
+        const response = await fetch("https://verix-project.onrender.com/chat", {
 
             method: "POST",
 
@@ -250,7 +250,7 @@ if (askAI) {
             </div>
         `;
 
-        const response = await fetch("http://localhost:3000/chat", {
+        const response = await fetch("https://verix-project.onrender.com/chat", {
 
             method: "POST",
 
