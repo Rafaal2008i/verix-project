@@ -51,9 +51,9 @@ app.post("/scan-url", async (req, res) => {
 
         let result = null;
 
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 10; i++) {
 
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            await new Promise(resolve => setTimeout(resolve, 2000));
 
             const response = await axios.get(
                 `https://www.virustotal.com/api/v3/analyses/${analysisId}`,
