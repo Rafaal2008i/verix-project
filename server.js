@@ -25,8 +25,7 @@ const ai = new GoogleGenAI({
    apiKey:process.env.GEMINI_API_KEY
   });  
 
-console.log("Gemini Key:", process.env.GEMINI_API_KEY);
-console.log("VT KEY:", process.env.VT_API_KEY);
+
 // =========================
 // VirusTotal Scan
 // =========================
@@ -52,9 +51,9 @@ app.post("/scan-url", async (req, res) => {
 
         let result = null;
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 20; i++) {
 
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await new Promise(resolve => setTimeout(resolve, 1500));
 
             const response = await axios.get(
                 `https://www.virustotal.com/api/v3/analyses/${analysisId}`,
